@@ -1,0 +1,389 @@
+@import 'vars.scss';
+
+#header {
+    background-color: $header-background-color;
+
+    .page-header__hyperlinks {
+        a {
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    .am-container {
+        &.visible {
+            .am-button {
+                background-color: $primary-color;
+            }
+        }
+        .am-list {
+            a {
+                color: $base-link-color;
+                text-decoration: none;
+                &:hover {
+                    color: $primary-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+.top-sticker-inner .breadcrumbs__wrapper {
+    padding: 0;
+    #breadcrumbs {
+        padding: 0 .7rem;
+        background-color: $primary-color-base;
+
+        .item {
+            &:hover {
+                background-color: transparent;
+            }
+
+            a {
+                color: $base-link-color;
+                &:hover {
+                    color: $primary-color;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        .children {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+#side-panel {
+    padding: .5rem;
+    border-right: 1px solid $border-color;
+
+    #buildQueue, #executors, #buildHistory {
+        border: 1px solid $border-color;
+        border-radius: .25rem;
+
+        .pane-header {
+            background-color: #fff;
+        }
+        .pane-header-title a {
+            color: $base-link-color;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .pane-content {
+        a:link {
+            color: $base-link-color;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }  
+        }
+    }
+
+    .pane-footer {
+        background-color: transparent;
+        a:link {
+            color: $base-link-color;
+            padding: .5rem;
+            border-radius: .25rem;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+                background-color: $primary-color-base;
+            }
+        }
+    }
+}
+#tasks {
+    .task {
+        .task-icon-link {
+            // display: none;
+        }
+    
+        .task-link {
+            color: $base-link-color;
+    
+            &:hover {
+                border-radius: .25rem;
+                background-color: $primary-color-base;
+                color: $primary-color;
+            }
+        }
+
+        .task-link--active {
+            border-radius: .25rem;
+            background-color: $primary-color-base;
+            color: $primary-color;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+#page-body {
+    a.link-button {
+        color: $base-link-color;
+        border: 0;
+        &:hover {
+            background-color: $primary-color-base;
+            color: $primary-color;
+        }
+    }
+    .content-block {
+        border: 0;
+        a {
+            color: $base-link-color;
+            border-radius: .25rem;
+            background-color: transparent;
+            &:hover {
+                background-color: $primary-color-base;
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// --- Add Item ---
+#add-item-panel form {
+    .header {
+        background-color: #fff;
+        border: 0;
+    }
+    .footer {
+        background-color: #fff;
+        border: 0;
+
+        .btn-decorator {
+            background-color: transparent;
+            border: 0;
+            right: 0;
+
+            #ok-button {
+                background-color: $primary-color;
+                border: 0;
+
+                &:hover {
+                    background-color: $primary-color-hover;
+                }
+            }
+        }
+    }
+    .item-copy {
+        background-color: transparent;
+        border-radius: 0 0 .5rem .5rem;
+    }
+    #items {
+        background-color: #fff;
+        border-radius: .5rem;
+    }
+    li {
+        border: 0;
+        border-bottom: 1px solid $border-color;
+        border-radius: .5rem;
+        &.active, &:focus {
+            box-shadow: 999rem 0 $primary-color-base;
+            background-color: $primary-color-base;
+        }
+        &:hover {
+            border: 0;
+            border-bottom: 1px solid $border-color;
+            background-color: $primary-color-base;
+        }
+    }
+}
+
+table {
+    &.bigtable {
+        .pane-header, th {
+            background-color: transparent;
+            border-top: 0;
+        }
+        &.sortable {
+            a.sortheader {
+                color: $base-link-color;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &.stripped {
+        tr {
+            &:hover {
+                background-color: $primary-color-base !important;
+            }
+        }
+    }
+}
+.jenkins-icon-size {
+    .jenkins-icon-size__items-item {
+        background-color: $primary-color-base;
+    }
+    a.link-button {
+        color: $base-link-color;
+        border: 0;
+        &:hover {
+            background-color: $primary-color-base;
+            color: $primary-color;
+        }
+    }
+}
+a {
+    &:link {
+        color: $base-link-color;
+    }
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.container {
+    width: 100%;
+    .col-md-20 {
+        width: 100%;
+    }
+    .col-md-offset-2 {
+        margin: 0;
+    }
+    .jenkins-config-widgets {
+        background-color: #fff;
+        border: 0;
+
+        .form-config.tabBarFrame {
+            border-bottom: 0;
+            .tabBar .tab {
+                border: 0;
+                color: $base-link-color;
+
+                &.active {
+                    color: $primary-color;
+                    border-bottom: 2px solid $primary-color;
+                }
+                &:hover {
+                    color: $primary-color;
+                    background-color: transparent;
+                    border-bottom: 2px solid $primary-color;
+                }
+            }
+        }
+    }
+}
+#jenkins {
+    .jenkins-config {
+        background-color: transparent;
+        border: 0;
+        .config-table {
+            .bottom-sticker-inner {
+                background-color: #fff;
+                border: 0;
+            }
+        }
+    }
+}
+.yui-button {
+    &.primary {
+        button {
+            background-color: $primary-color;
+            border: 0;
+            color: #fff;
+            &:hover {
+                background-color: $primary-color-hover;
+            }
+        }
+    }
+    button {
+        background-color: transparent;
+        border: 0;
+        color: $base-link-color;
+        &:hover {
+            background-color: $primary-color-base;
+            color: $primary-color;
+        }
+    }
+}
+.tabBar {
+    .tab {
+        &.active {
+            a {
+                border: 0;
+                border-bottom: 2px solid $primary-color;
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+        a {
+            border: 0;
+            border-bottom: 2px solid transparent;
+            background-color: transparent;
+            color: $base-link-color;
+            &:hover {
+                border-bottom: 2px solid $primary-color;
+                background-color: transparent;
+                color: $primary-color;
+            }
+            &.addTab {
+                color: $base-link-color;
+                border: 0;
+                &:hover {
+                    color: $primary-color;
+                    background-color: $primary-color-base;
+                }
+            }
+        }
+    }
+}
+#projectstatus {
+    tr {
+        border-color: $border-color;
+        &:hover {
+            background-color: $primary-color-base !important;
+        }
+    }
+    .header {
+        background-color: transparent;
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+}
+.icon-nobuilt .svg-icon, [class*="icon-health-"] {
+    color: #bbb;
+}
+.icon-blue .svg-icon, .icon-blue-anime .svg-icon {
+    color: #18d9cc;
+    fill: #18d9cc;
+}
+.icon-red .svg-icon, .icon-red-anime .svg-icon {
+    color: #ff3e7f;
+    fill: #ff3e7f;
+}
+.icon-aborted .svg-icon, .icon-aborted-anime .svg-icon {
+    color: #5e5e5e;
+}
+.icon-nobuilt-anime .svg-icon {
+    color: #386cf7;
+}
+.jenkins-pane__information {
+    background-color: transparent;
+}
+.default-icon-size {
+    width: 1.2rem;
+    display: inline-flex;
+    vertical-align: middle;
+}
+h1 .default-icon-size {
+    width: 2rem;
+    height: 2rem;
+}
+.fa-xmark {
+    width: .6rem;
+}
